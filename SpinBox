@@ -1,0 +1,29 @@
+using UnityEngine;
+using System.Collections;
+
+public class SpinBox : MonoBehaviour {
+
+
+    public string anim;
+    public string anim2;
+
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetKeyDown("e"))
+        {
+            gameObject.GetComponent<Animation>().Play(anim);
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            gameObject.GetComponent<Animation>().Play(anim2);
+            gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        }
+	}
+}
